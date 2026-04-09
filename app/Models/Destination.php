@@ -26,4 +26,9 @@ class Destination extends Model
     {
         return $this->hasMany(Facility::class);
     }
+
+    public function tourPackages()
+    {
+        return $this->belongsToMany(TourPackage::class);
+    }
 }
