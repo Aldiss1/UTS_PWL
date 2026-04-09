@@ -22,6 +22,11 @@ class CategoryResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'name';
 
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['name'];
+    }
+
     public static function form(Schema $schema): Schema
     {
         return CategoryForm::configure($schema);

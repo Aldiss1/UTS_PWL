@@ -22,6 +22,19 @@ class DestinationResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'name';
 
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['name', 'city', 'category.name'];
+    }
+
+    public static function getGlobalSearchResultDetails(\Illuminate\Database\Eloquent\Model $record): array
+    {
+        return [
+            'Kota' => $record->city,
+            'Kategori' => $record->category->name,
+        ];
+    }
+
     public static function form(Schema $schema): Schema
     {
         return DestinationForm::configure($schema);
