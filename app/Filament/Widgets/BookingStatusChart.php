@@ -7,7 +7,7 @@ use Filament\Widgets\ChartWidget;
 
 class BookingStatusChart extends ChartWidget
 {
-    protected static ?string $heading = 'Status Transaksi Booking';
+    protected ?string $heading = 'Status Transaksi Booking';
     protected static ?int $sort = 2; // Bersebelahan dengan Destinations Chart
 
     protected function getData(): array
