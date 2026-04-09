@@ -7,7 +7,7 @@ use App\Models\Category;
 
 class DestinationsByCategoryChart extends ChartWidget
 {
-    protected static ?string $heading = 'Sebaran Destinasi per Kategori';
+    protected ?string $heading = 'Sebaran Destinasi per Kategori';
     
     protected static ?int $sort = 2;
 
